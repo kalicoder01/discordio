@@ -2,20 +2,21 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const userSchema = new Schema({
-    name: {
+    username: {
         type: String,
         required: true
     },
-    tag: {
-        type: Int
+    discriminator: {
+        type: Number,
+        required: true
     }, 
     discordId: {
-        type: Int,
+        type: Number,
         required: true
     },
-    owner: {
-        ref: 'users',
-        type: Schema.Types.ObjectId
+    token: {
+        type: String,
+        required: true
     }
 });
 

@@ -1,0 +1,8 @@
+<% if (authenticated == true) { %>
+    <p>Authenticated: <%= authenticated %></p>
+    <p>API token: <%= token %></p>    
+<% } else { %>
+    <p>Not authenticated</p>
+<% } %>
+
+<a href="<%= authUrl %>">Login with discord</a>
