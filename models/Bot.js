@@ -21,7 +21,8 @@ const botSchema = new Schema({
     owner: {
         ref: 'users',
         type: Schema.Types.ObjectId,
-        required: true
+        required: true,
+        toJson: false
     },
     verified: {
         type: Boolean,

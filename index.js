@@ -51,6 +51,13 @@ app.get('/', (req, res) => {
         authenticated: session.authenticated,
         token: session.token
     });
-})
+});
+
+app.get('/test', (req, res) => {
+
+    res.send({
+        123: 123
+    })
+});
 
 app.listen(8000);

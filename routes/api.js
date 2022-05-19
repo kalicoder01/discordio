@@ -4,7 +4,7 @@ var bots = require('./bots')
 var router = express.Router();
 
 router.get('/', (req, res) => {
-    res.send({
+    res.json({
         status: 'OK',
         version: '1.0',
     });

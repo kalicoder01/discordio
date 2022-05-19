@@ -17,14 +17,14 @@ function authenticate (req, res, next) {
                     next();
 
                 } else {
-                    res.status(403).send({
+                    res.status(403).json({
                         code: 40302,
                         errors: ['Token is invalid']
                     });
                 }
             });
         } else {
-            res.status(403).send({
+            res.status(403).json({
                 code: 40301,
                 errors: ['No auth token']
             });
